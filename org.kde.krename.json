@@ -82,10 +82,15 @@
                     "type": "archive",
                     "url": "https://download.kde.org/stable/frameworks/5.111/portingAids/kjs-5.111.0.tar.xz",
                     "sha256": "0f947fb59a418362ac7bde8c4183775353c31544213c4ee45c0e3d779831cf23",
+                    "//": "KJS is a KF5 porting aid; exclude KF6, including the 5.2xx previews.",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 8762,
                         "stable-only": true,
+                        "versions": {
+                            ">=": "5.0",
+                            "<": "5.200"
+                        },
                         "url-template": "https://download.kde.org/stable/frameworks/$major.$minor/portingAids/kjs-$version.tar.xz"
                     }
                 }
@@ -108,9 +113,15 @@
                     "type": "archive",
                     "url": "https://downloads.sourceforge.net/project/podofo/podofo/0.9.8/podofo-0.9.8.tar.gz",
                     "sha256": "5de607e15f192b8ad90738300759d88dea0f5ccdce3bf00048a0c932bc645154",
+                    "//": "KRename 5.0.2 needs the pre-0.10 API; compatible 0.9.x releases remain on SourceForge.",
                     "x-checker-data": {
                         "type": "anitya",
                         "project-id": 10527,
+                        "stable-only": true,
+                        "versions": {
+                            ">=": "0.9",
+                            "<": "0.10"
+                        },
                         "url-template": "https://downloads.sourceforge.net/project/podofo/podofo/$version/podofo-$version.tar.gz"
                     }
                 }
